@@ -14,13 +14,13 @@ To follow the course you need to download the material from this web-page. The s
 ___
 Para seguir el curso, debéis descargar todo el material desde esta misma página. Las transparencias y también el código.
 
-### Prerequisites
+### Prerequisites:
 
 The student must know basics about computers and programming, and also a little bit of maths and statistics is recommendable.
 ___
 El estudiante debe tener conocimientos básicos sobre ordenadores y programación, y es recomendable tener conocimientos básicos sobre  matemáticas y estadística.
 
-### Installing
+### Installing:
 
 To install the environment related necessary for the course, you can find the information in the slides.
 Also if you are familiar with Python and other languages, for this course we will use:
@@ -31,6 +31,6 @@ Para instalar el entorno necesario para el curso, debéis mirar en las transpare
 También, para los que sois familiares con Python y otros lenguajes de programación, para este curso, usaremos:
 * [Anaconda](https://www.continuum.io/downloads) - EL entorno principal
 
-## Authors
+## Authors:
 
 * **José María Lago** - *Entire page* - [JM](https://github.com/jmlago)
