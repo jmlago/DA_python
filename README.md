@@ -14,28 +14,17 @@ Para seguir el curso, debeis descargar todo el material desde esta misma pagina.
 The student must know basics about computers, and also a little bit of maths and statistics is recommendable.
 ___
 El estudiante debe tener conocimientos basicos sobre ordenadores y programación, y es recomendable tener conocimientos basicos sobre  matematicas y estadística.
-```
-Give examples
-```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+To install the enviroment related necessary for the course, you can find the information in the slides.
+Also if you are familiar with Python and other languages, for this course we will use:
+* [Anaconda](https://www.continuum.io/downloads) - The main enviroment
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
+___
+Para instalar el entorno necesario para el curso, debeis mirar en las transparencias.
+También, para los que sois familiares con Python y otros lenguajes de programación, para este curso, usaremos:
+* [Anaconda](https://www.continuum.io/downloads) - EL entorno principal
 
 ## Authors
 
