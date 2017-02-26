@@ -1,0 +1,68 @@
+COCHES.NET
+
+INFO FROM CHROME
+
+<div class="mt-SerpList">
+    
+    
+    
+<div class="mt-SerpList-item">
+    <article class="mt-Card  mt-Card--topAd">
+        <div class="mt-Card-body">
+            <div class="mt-CardAd" data-tagging="c_list_detail_ad">
+                <a href="/mercedes-benz-clase-c-c-220-d-4p-diesel-2015-en-barcelona-32192271-covo.aspx" class="mt-CardAd-link">
+                    <h2 class="mt-CardAd-title">
+                        <span class="mt-CardAd-titleHiglight">MERCEDES-BENZ Clase C C 220 d 4p.</span>
+                    </h2>
+
+                    <div class="mt-CardAd-top">
+                        <div class="mt-CardAd-price">
+                            <strong class="mt-CardAd-titleHiglight">34.900 €</strong>
+                        </div>
+
+                        <div class="mt-CardAd-extras">
+                            
+                            
+                            <div class="mt-CardAd-extra">Con Garantía</div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="mt-CardAd-middle">
+                        <ul class="mt-CardAd-attributesList">
+                            <li class="mt-CardAd-attribute">Barcelona</li>
+                            <li class="mt-CardAd-attribute">Diesel</li>
+                            <li class="mt-CardAd-attribute">2015</li>
+                            <li class="mt-CardAd-attribute">19.884 km</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <div class="mt-CardAd-tools">
+                    <button type="button" class="mt-CardAd-favorite js_fav" data-tagging="c_list_detail_saved_ad" id="32192271" data-id="32192271">
+                        <svg class="mt-Icon s0_xs">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite/icons.svg#star-full"></use>
+                        </svg>
+                        <span class="u-hide--visually">Añadir a mis favoritos</span>
+                    </button>
+                </div>
+            </div>
+
+            <a href="/mercedes-benz-clase-c-c-220-d-4p-diesel-2015-en-barcelona-32192271-covo.aspx" class="mt-CardAdDate">
+                <div class="mt-CardAdDate-time">27/09 07:26</div>
+            </a>
+        </div>
+
+        <div class="mt-Card-media">
+            <a href="/mercedes-benz-clase-c-c-220-d-4p-diesel-2015-en-barcelona-32192271-covo.aspx" class="mt-Card-linkWrapper">
+                <div class="mt-Carrousel">
+                    <div class="mt-Carrousel-imgWrap">
+                        <div id="_ctl0_ContentPlaceHolder1_Grid1__ctl0_foto" class="p preload j_photo" style="background-position: 0px 0px; background-image: url(&quot;http://a.ccdn.es/cnet//2016/09/27/32192271/105379652_g.jpg/235x160cut/&quot;); display: block;" data-n="0" data-ids="[&quot;105379652&quot;,&quot;105379655&quot;,&quot;105379590&quot;,&quot;105379599&quot;,&quot;105379649&quot;]" data-path="2016/09/27/32192271"></div>
+                        <div id="_ctl0_ContentPlaceHolder1_Grid1__ctl0_imgPrev" class="prev-pic u-hide--inMobile" data-xtclib="parrillaVO_pasadoranterior" xtcltype="A" data-tagging="c_list_detail_gallery"></div>
+                        <div id="_ctl0_ContentPlaceHolder1_Grid1__ctl0_imgNext" class="next-pic u-hide--inMobile" data-xtclib="parrillaVO_pasadorsiguiente" xtcltype="A" data-tagging="c_list_detail_gallery"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </article>
+</div>
