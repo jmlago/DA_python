@@ -110,3 +110,187 @@ dflamb = dfandstats(urlamb)
 #############################################################################################################
 #############################################################################################################
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##import interactive plots
+import plotly.offline as py
+import plotly.graph_objs as go
+
+trace1 = go.Scatter(
+    x = dffe["Year"],
+    y = dffe["Price €"],
+    mode = 'markers',
+    marker= dict(size= 10,
+                    color= "rgba(255, 0, 0, 1.0)",
+                    opacity= 0.8
+                   ),
+    name = "Ferrari"
+)
+trace2 = go.Scatter(
+    x = dfam["Year"],
+    y = dfam["Price €"],
+    mode = 'markers',
+    marker= dict(size= 10,
+                    color= "rgba(155, 155, 155, 1.0)",
+                    opacity= 0.8
+                   ),
+    name = "Aston Martin"
+)
+trace3 = go.Scatter(
+    x = dflamb["Year"],
+    y = dflamb["Price €"],
+    mode = 'markers',
+    marker= dict(size= 10,
+                    color= "rgba(255, 200, 0, 1.0)",
+                    opacity= 0.8
+                   ),
+    name = "Lamborghini"
+)
+
+
+data = [trace1,trace2,trace3]
+
+# Plot and embed in HTML
+py.plot(data, filename='Super-Cars')
+
+
+
+
+
+
+
+
+
+
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+#############################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##We can not reuse this code at all because of the colors in the plot, 
+
+##Let's do some statistics
+
+##how is the space (year,km,price)
+dfsupercars = dffe.append(dfam).append(dflamb)
+
+trace1 = go.Scatter3d(
+    x=dffe["Price €"],
+    y=dffe["Year"],
+    z=dffe["Km"],
+    mode='markers',
+    marker=dict(
+        size=8,
+        color=dffe["Year"],
+        colorscale='Viridis',
+        line=dict(
+            color='rgba(117, 117, 117, 0.14)',
+            width=0.5
+        ),
+        opacity=0.8
+    )
+)
+data = [trace1]
+
+py.plot(data,filename="Can_we_PCA")
+
+## so it seems reasonable to reduce the dimension to 2
+
+## lets use some scikit-learn to reduce the dimension and see how it does
+from sklearn import manifold
+import numpy as np
+import time
+
+##Using MultiDimensional Scaling to reduce the dimension
+cars_space = np.asarray([dfsupercars["Price €"],dfsupercars["Year"],dfsupercars["Km"]],dtype=float).T
+
+start = time.time()                       
+mds = manifold.MDS(2, max_iter=100, n_init=1,n_jobs=1)
+
+trans_data = mds.fit_transform(cars_space).T
+mds.get_params()
+end = time.time()
+print("Elapsed time during the PCA:",end-start)
+
+mds_trace = go.Scatter(
+    x = trans_data[0],
+    y = trans_data[1],
+    mode = 'markers',
+    marker= dict(size= 10,
+                    color=dffe["Year"],
+                    colorscale='Viridis',
+                    opacity= 0.8
+                   ),
+    name = "Ferrari"
+)
+data = [mds_trace]
+py.plot(data,filename="MDS of supercars")
+
+
+
+## PCA method with SVD
+from sklearn.decomposition import PCA
+X = cars_space
+pca = PCA(n_components=2)
+pca.fit(X)
+print(pca.explained_variance_ratio_,pca.inverse_transform([200000,25000]),pca.components_)##tools to return to the original space
+ 
+trans_data = pca.fit_transform(X).T
+                                  
+    svd_trace = go.Scatter(
+        x = trans_data[0],
+        y = trans_data[1],
+        mode = 'markers',
+        marker= dict(size= 10,
+                        color=dffe["Year"],
+                        colorscale='Viridis',
+                        opacity= 0.8
+                       )
+    )
+    data = [svd_trace]
+    py.plot(data,filename="SVD of supercars")
+    
+
+
+## let's find a forecaster for the price of a ford in the year 2018 with the new reducted space
+import pandas as pd
+urford = buildurl("ford","ANY",999999,0,250000,0,"")
+dfford = dfandstats(urford[:25])
+dfaux = dfford.groupby("Year").mean()
+dfaux["Price €"].plot()
+dfaux["Km"].plot()
