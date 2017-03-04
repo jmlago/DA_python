@@ -26,6 +26,41 @@ To install the environment related necessary for the course, you can find the in
 Also if you are familiar with Python and other languages, for this course we will use:
 * [Anaconda](https://www.continuum.io/downloads) - The main enviroment
 
+#### For those who want deep learning libraries:
+Here is an example of how to install tensorflow and theano, which are 2 of the most used libraries in the world in terms of deep learning, for both libraries we need to have python3.5 by now so execute the following commands in AnacondaPrompt as admin (or as sudoer in Linux systems):
+```
+conda install python=3.5
+```
+##### Tensorflow:
+Try it if it works in a particular enviroment and see if something is broke with this commands:
+```
+conda create -n tensorflow
+activate tensorflow
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
+```
+And if your computer is x64 then replace the last command with:
+```
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_amd64.whl
+```
+This are the commands to install the CPU version (not GPU), if you want the complete information look at:
+* [Install tensorflow](https://www.tensorflow.org/install/install_windows) - installation pseudo-guide
+
+Then open a local python in the same AnacondaPrompt with:
+```
+python
+>>> import tensorflow as tf
+```
+And try if all is working ok.
+Then you can install tensorflow with the same pip command without an specific environment called tensorflow so, just open the AnacondaPrompt as admin and execute:
+```
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
+```
+##### Theano:
+Just need to open the AnacondaPrompt as admin and execute the following, after DOWNGRADING to python 3.5:
+```
+conda install theano
+```
+
 ___
 Para instalar el entorno necesario para el curso, debéis mirar en las transparencias.
 También, para los que sois familiares con Python y otros lenguajes de programación, para este curso, usaremos:
