@@ -84,7 +84,7 @@ Si nuestra arquitectura es de 64 bits, entonces necesitamos el siguiente comando
 pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_amd64.whl
 ```
 Estos comandos son los necesarios para instalar la version para CPI (no para GPU), si necesitais mas informacion:
-* [Install tensorflow](https://www.tensorflow.org/install/install_windows) - installation pseudo-guide
+* [Install tensorflow](https://www.tensorflow.org/install/install_windows) - pseudo-guía de instalación
 
 Entonces abrimos un interprete de python en la propia consola de AnacondaPrompt y importamos tensorflow para ver que todo va bien con:
 ```
