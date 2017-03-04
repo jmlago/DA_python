@@ -66,6 +66,41 @@ Para instalar el entorno necesario para el curso, debéis mirar en las transpare
 También, para los que sois familiares con Python y otros lenguajes de programación, para este curso, usaremos:
 * [Anaconda](https://www.continuum.io/downloads) - EL entorno principal
 
+
+#### Para los que querais librerias de deep learning:
+Este es un ejemplo de como instalar tensorflow y theano, que son 2 de las librerias mas famosas en el mundo del deep learning. Como las dos requieren python3.5 por ahora, empezemos por desactualizar el entorno, abrimos AnacondaPrompt como administradores (o como sudoer en Linux):
+```
+conda install python=3.5
+```
+##### Tensorflow:
+Para probar que todo funciona y no hemos roto nada, creamos un entorno con el nombre tensorflow, lo activamos y instalamos la libreria con el comando pip:
+```
+conda create -n tensorflow
+activate tensorflow
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
+```
+Si nuestra arquitectura es de 64 bits, entonces necesitamos el siguiente comando que sustituye al anterior:
+```
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_amd64.whl
+```
+Estos comandos son los necesarios para instalar la version para CPI (no para GPU), si necesitais mas informacion:
+* [Install tensorflow](https://www.tensorflow.org/install/install_windows) - installation pseudo-guide
+
+Entonces abrimos un interprete de python en la propia consola de AnacondaPrompt y importamos tensorflow para ver que todo va bien con:
+```
+python
+>>> import tensorflow as tf
+```
+Despues de probar y ver que todo va bien, podemos ejecutar el comando pip sin necesidad de crear un entorno especifico llamado tensorflow y asi podremos llamar a la libreria con nuestro entorno predeterminado de conda, por tanto nos logeamos como administradores en AnacondaPrompt y ejecutamos:
+```
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
+```
+##### Theano:
+Para instalar theano, solo necesitamos iniciar AnacondaPrompt como administradores y ejecutamos lo siguiente, habiendo ya desactualizado nuestra versión de python a 3.5, por tanto:
+```
+conda install theano
+```
+
 ## Authors:
 
 * **José María Lago** - *Entire page* - [JM](https://github.com/jmlago)
