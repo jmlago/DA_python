@@ -1,8 +1,9 @@
-# Data Analysis in Python SEA/UAB course 2016/2017
+# Data Analysis in Python SEA/UAB course 2017/2018
 This is a course promoted by the SEA and UAB, to share Python and Data Analysis knowledge with scientific community.
-Is important to notice that this is an introduction course.
+Is important to notice that this is an introductory course.
 ___
-Este curso esta promovido por el SEA y la UAB, el objetivo es compartir los conocimientos tanto de Python como de Data Analysis con la comunidad científica.
+Este curso esta promovido por el SEA y la UAB, el objetivo es compartir los conocimientos tanto de Python como de Data Analysis con la comunidad científica. Es importante tener en cuenta que es un curso introductorio.
+
 ## Phylosophy of the course:
 This course is about learning the basics of Python and also to learn a couple of mathematical and statistical techniques to deal with the data, with the objective of extracting information from the data.
 The aim is not to go deep into the mathematical representations of all the models but on the applications of those models with Python.
@@ -10,9 +11,9 @@ ___
 La idea de este curso es aprender a grandes rasgos como usar Python, y también una buena batería de modelos matemáticos y estadísticos para poder extraer la información necesaria a partir de los datos.
 El objetivo no es profundizar en las representaciones matemáticas de los modelos, pero si entender su aplicación y poder usarlos con agilidad mediante Python.
 ## Here are the instructions to follow the course:
-To follow the course you need to download the material from this web-page. The slides and also the code.
+To follow the course you need to download the material from this web-page. The slides, other PDFs and also the code.
 ___
-Para seguir el curso, debéis descargar todo el material desde esta misma página. Las transparencias y también el código.
+Para seguir el curso, debéis descargar todo el material desde esta misma página. Las transparencias, PDFs y también el código.
 
 ### Prerequisites:
 
@@ -27,79 +28,79 @@ Also if you are familiar with Python and other languages, for this course we wil
 * [Anaconda](https://www.continuum.io/downloads) - The main enviroment
 
 #### For those who want deep learning libraries:
-Here is an example of how to install tensorflow and theano, which are 2 of the most used libraries in the world in terms of deep learning, for both libraries we need to have python3.5 by now so execute the following commands in AnacondaPrompt as admin (or as sudoer in Linux systems):
+**Is important that deep learning libraries just work under Unix systems (Linux and OS)**
+Here is an example of how to install pytorch, which is one of the most used libraries in the world in terms of deep learning, for this library we need to have python3.6 by now so execute the following commands:
 ```
-conda install python=3.5
+conda install python=3.6
 ```
-##### Tensorflow:
+##### PyTorch:
 Try it if it works in a particular enviroment and see if something is broke with this commands:
 ```
-conda create -n tensorflow
-activate tensorflow
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
+conda create --name pytorch
+source activate pytorch
+conda install pytorch torchvision -c soumith
 ```
-And if your computer is x64 then replace the last command with:
+
+This are the commands to install the CPU version (not GPU), if you want to install pytorch with GPU support:
 ```
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_amd64.whl
+conda install pytorch torchvision cuda80 -c soumith
 ```
-This are the commands to install the CPU version (not GPU), if you want the complete information look at:
-* [Install tensorflow](https://www.tensorflow.org/install/install_windows) - installation pseudo-guide
+instead of:
+```
+conda install pytorch torchvision -c soumith
+```
+
+* [PyTorch](http://pytorch.org/) - initial pytorch page
 
 Then open a local python in the same AnacondaPrompt with:
 ```
 python
->>> import tensorflow as tf
+>>> import torch
 ```
 And try if all is working ok.
-Then you can install tensorflow with the same pip command without an specific environment called tensorflow so, just open the AnacondaPrompt as admin and execute:
-```
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
-```
-##### Theano:
-Just need to open the AnacondaPrompt as admin and execute the following, after DOWNGRADING to python 3.5:
-```
-conda install theano
-```
 
+##### Tensorflow of Windows users
+For Windows users, that can not install pytorch, you can try to install tensorflow, following this guide:
+* [Install Tensorflow on Windows](https://www.tensorflow.org/install/install_windows)
 ___
-Para instalar el entorno necesario para el curso, debéis mirar en las transparencias.
-También, para los que sois familiares con Python y otros lenguajes de programación, para este curso, usaremos:
-* [Anaconda](https://www.continuum.io/downloads) - EL entorno principal
+Para instalar el entorno que vamos a usar durante el curso, usaremos el material que se proporciona en las diapositivas.
+Para los que tengáis experiencia con Python y con otros lenguajes parecidos, durante el curso usaremos:
+* [Anaconda](https://www.continuum.io/downloads) - The main enviroment
 
+#### Para los que queráis librerías de Deep Learning:
+**Es importante saber que la mayoria de entornos de deep learning actualmente solo están soportados por sistemas Unix (Linux y OS)**
+Una posible forma de instalar pytorch, que es una de las librerías de deep learning mas usadas actualmente, es ejecutando los siguientes comandos:
+```
+conda install python=3.6
+```
+##### PyTorch:
+Primero crearemos un entorno virtual para probar que nada que instale pytorch rompa alguna de las dependencias entre librerías:
+```
+conda create --name pytorch
+source activate pytorch
+conda install pytorch torchvision -c soumith
+```
+Estos son los comandos para instalar Pytorch (CPU), si queremos la versión de GPU, tendremos que ejecutar:
+```
+conda install pytorch torchvision cuda80 -c soumith
+```
+en lugar de:
+```
+conda install pytorch torchvision -c soumith
+```
 
-#### Para los que querais librerias de deep learning:
-Este es un ejemplo de como instalar tensorflow y theano, que son 2 de las librerias mas famosas en el mundo del deep learning. Como las dos requieren python3.5 por ahora, empezemos por desactualizar el entorno, abrimos AnacondaPrompt como administradores (o como sudoer en Linux):
-```
-conda install python=3.5
-```
-##### Tensorflow:
-Para probar que todo funciona y no hemos roto nada, creamos un entorno con el nombre tensorflow, lo activamos y instalamos la libreria con el comando pip:
-```
-conda create -n tensorflow
-activate tensorflow
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
-```
-Si nuestra arquitectura es de 64 bits, entonces necesitamos el siguiente comando que sustituye al anterior:
-```
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_amd64.whl
-```
-Estos comandos son los necesarios para instalar la version para CPI (no para GPU), si necesitais mas informacion:
-* [Install tensorflow](https://www.tensorflow.org/install/install_windows) - pseudo-guía de instalación
+* [PyTorch](http://pytorch.org/) - Pagina de PyTorch
 
-Entonces abrimos un interprete de python en la propia consola de AnacondaPrompt y importamos tensorflow para ver que todo va bien con:
+Para revisar que lo tenemos instalado:
 ```
 python
->>> import tensorflow as tf
+>>> import torch
 ```
-Despues de probar y ver que todo va bien, podemos ejecutar el comando pip sin necesidad de crear un entorno especifico llamado tensorflow y asi podremos llamar a la libreria con nuestro entorno predeterminado de conda, por tanto nos logeamos como administradores en AnacondaPrompt y ejecutamos:
-```
-pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.0-cp35-cp35m-win_x86_64.whl
-```
-##### Theano:
-Para instalar theano, solo necesitamos iniciar AnacondaPrompt como administradores y ejecutamos lo siguiente, habiendo ya desactualizado nuestra versión de python a 3.5, por tanto:
-```
-conda install theano
-```
+Y podemos probar un pequeño ejemplo para ver que funciona correctamente.
+
+##### Tensorflow para usuarios de Windows:
+Para los que usáis windows, y que no podáis instalar pytorch, podéis seguir la siguiente guía para instalar tensorflow:
+* [Instalar Tensorflow en Windows](https://www.tensorflow.org/install/install_windows)
 
 ## Authors:
 
