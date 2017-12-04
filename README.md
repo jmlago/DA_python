@@ -20,21 +20,20 @@ Also if you are familiar with Python and other languages, for this course we wil
 * [Anaconda](https://www.anaconda.com/download/) - The main enviroment
 
 #### Deep learning libraries (Mx-Net):
-**Is important that deep learning libraries just work under Unix systems (Linux and OS)**
-Here is an example of how to install mxnet, which is one of the best DL frameworks, for this we will execute the following commands (just for windows users) in  the \texttt{AnacondaPrompt}:
+Here is an example of how to install mxnet, which is one of the best DL frameworks, for this we will execute the following commands (just for windows users) in  the `AnacondaPrompt`:
 
 ```
 conda create --name mxnet
 source activate mxnet
 pip install mxnet
 ```
-**If you are not using Windows or you want GPU support**
+**If you are not using Windows or you want GPU support (only CUDA)**
 Go to the following link and choose your OS and your requirements, after that follow the commands (also try to include the conda environments as in the Windows example):
 * [Mx-Net](https://mxnet.incubator.apache.org/install/index.html) - The DL framework installation guide
 
 To check if everything is working:
-* Open ***Spyder***
-* ```
+* Open `Spyder` and tip:
+```
 import mxnet as mx
 from mxnet import nd
 mx.random.seed(1)
@@ -46,13 +45,72 @@ print(x)
 print(y)
 print(x + y)
 ```
-* You can check if the result is correct. If you are having issues, you can send me an e-mail via SEA
+* Check yourselves if the results are correct. If you are having issues, you can send me an e-mail via SEA
 
 #### Deep learning libraries (Others):
 If you are interested in deep learning world, and you want also to install other deep learning frameworks (majority of them are just available in Linux), you can take a look at:
 * [Tensorflow](https://www.tensorflow.org/install/) - Tensorflow installation guide
 * [Pytorch](http://pytorch.org/) - Pytorch installation commands
 We will discuss that during the course.
+
+___
+
+# Análisis de datos en Python SEA/UAB, curso 2017/2018 (ES)
+Este es un curso promovido por el SEA y la UAB, para compartir conocimientos de Python y Análisis de datos con la comunidad científica.
+Es importante entender que este es un curso introductorio.
+## Filosofía del curso:
+Este curso esta orientado a aprender los conceptos básicos de Python y también de aprender un par de técnicas matemáticas y/o estadísticas para tratar con los datos, con el objetivo de extraer información de los mismos.
+El objetivo no es profundizar en las representaciones matemáticas de todos los modelos, sino en las aplicaciones de dichos modelos con Python.
+
+## Como seguir el curso:
+Para seguir el curso, se debe descargar el material de esta página web. Las diapositivas, otros archivos PDF y también el código.
+### Prerrequisitos:
+
+El estudiante debe saber lo básico sobre computación y programación, y también es recomendable un poco de matemáticas y estadística.
+
+### Instalación:
+Para instalar el entorno de Python que vamos a necesitar durante el curso, podemos encontrar la información en las diapositivas.
+Si estamos familiarizados ya con Python y otros lenguajes, y queremos instalar ya el entorno:
+
+* [Anaconda](https://www.anaconda.com/download/) - El entorno principal
+
+#### Librerías de Deep Learning (Mx-Net):
+
+Aquí hay un ejemplo de cómo instalar mxnet, que es uno de los mejores frameworks de DL, para esto ejecutaremos los siguientes comandos (solo para usuarios de Windows) en el `AnacondaPrompt`:
+
+```
+conda create --name mxnet
+source activate mxnet
+pip install mxnet
+```
+**Si no vamos a usar Windows o queremos soporte para GPU (solo CUDA)**
+Iremos al siguiente enlace y elegiremos nuestro sistema operativo y sus requisitos, luego seguiremos los comandos (también intentaremos incluir el entorno `conda` como en el ejemplo de Windows):
+* [Mx-Net](https://mxnet.incubator.apache.org/install/index.html) - The DL framework installation guide
+
+Para verificar que todo funciona:
+* Abrimos `Spyder` y escribimos:
+```
+import mxnet as mx
+from mxnet import nd
+mx.random.seed(1)
+
+
+x = nd.ones((3, 4))
+y = nd.random_normal(0, 1, shape=(3, 4))
+print(x)
+print(y)
+print(x + y)
+```
+* Podemos comprobar si los resultados son correctos. Si tenéis problemas, podéis enviarme un correo electrónico a través del SEA
+
+#### Librerías de Deep Learning (Otros):
+Si estáis interesados en el mundo del aprendizaje profundo y también deseáis instalar otros frameworks de aprendizaje profundo (la mayoría de ellos solo están disponibles en Linux), podéis consultar:
+* [Tensorflow](https://www.tensorflow.org/install/) - Tensorflow guía de instalación
+* [Pytorch](http://pytorch.org/) - Pytorch comandos para instalar
+
+Discutiremos esto durante el curso.
+
+___
 
 ## Authors:
 
