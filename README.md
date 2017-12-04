@@ -9,17 +9,17 @@ The aim is not to go deep into the mathematical representations of all the model
 ## Here are the instructions to follow the course:
 To follow the course you need to download the material from this web-page. The slides, other PDFs and also the code.
 
-### Prerequisites:
+## Prerequisites:
 
 The student must know basics about computers and programming, and also a little bit of maths and statistics is recommendable.
 
-### Installing:
+## Installing:
 
 To install the environment related necessary for the course, you can find the information in the slides.
 Also if you are familiar with Python and other languages, for this course we will use:
 * [Anaconda](https://www.anaconda.com/download/) - The main enviroment
 
-#### Deep learning libraries (Mx-Net):
+### Deep learning libraries (Mx-Net):
 Here is an example of how to install mxnet, which is one of the best DL frameworks, for this we will execute the following commands (just for windows users) in  the `AnacondaPrompt`:
 
 ```
@@ -47,11 +47,32 @@ print(x + y)
 ```
 * Check yourselves if the results are correct. If you are having issues, you can send me an e-mail via SEA
 
-#### Deep learning libraries (Others):
+### Deep learning libraries (Others):
 If you are interested in deep learning world, and you want also to install other deep learning frameworks (majority of them are just available in Linux), you can take a look at:
 * [Tensorflow](https://www.tensorflow.org/install/) - Tensorflow installation guide
 * [Pytorch](http://pytorch.org/) - Pytorch installation commands
 We will discuss that during the course.
+
+## Contents of the course:
+I hope that we can do all this content:
+
+### Aerial perspective of DA:
+Basic concepts of Data Analysis and Python. A global view of the environment... (`Anaconda`, `Spyder` and other IDEs, `basic commands`, ...)
+
+### Data gathering:
+This will be teached maybe during the last sessions, because of complexity with regexs and web scrapping... (`BeautifulSoup`, `requests`, ...)
+
+### Exploratory analysis and cleaning:
+With real data, understand how to prepare the data, and how to do visualizations... (`numpy`, `pandas`, `matplotlib`, ...)
+
+### Algorithm Selection:
+We will see some algorithms of data analysis, like SVD and clustering algorithms... (theoretical concepts, `scikit-learn`, `scipy`, ...)
+
+### Performance Engineering:
+When we work with big amounts of data, or with complex algorithms or functions, we need to know how we can speed up our code... (`numba`, `mxnet`, ...)
+
+### Deep Learning:
+A tiny view of the deep learning world... (NN (possible CNN),`mxnet`, ...)
 
 ___
 
@@ -64,17 +85,17 @@ El objetivo no es profundizar en las representaciones matemáticas de todos los 
 
 ## Como seguir el curso:
 Para seguir el curso, se debe descargar el material de esta página web. Las diapositivas, otros archivos PDF y también el código.
-### Prerrequisitos:
+## Prerrequisitos:
 
 El estudiante debe saber lo básico sobre computación y programación, y también es recomendable un poco de matemáticas y estadística.
 
-### Instalación:
+## Instalación:
 Para instalar el entorno de Python que vamos a necesitar durante el curso, podemos encontrar la información en las diapositivas.
 Si estamos familiarizados ya con Python y otros lenguajes, y queremos instalar ya el entorno:
 
 * [Anaconda](https://www.anaconda.com/download/) - El entorno principal
 
-#### Librerías de Deep Learning (Mx-Net):
+### Librerías de Deep Learning (Mx-Net):
 
 Aquí hay un ejemplo de cómo instalar mxnet, que es uno de los mejores frameworks de DL, para esto ejecutaremos los siguientes comandos (solo para usuarios de Windows) en el `AnacondaPrompt`:
 
@@ -103,12 +124,34 @@ print(x + y)
 ```
 * Podemos comprobar si los resultados son correctos. Si tenéis problemas, podéis enviarme un correo electrónico a través del SEA
 
-#### Librerías de Deep Learning (Otros):
+### Librerías de Deep Learning (Otros):
 Si estáis interesados en el mundo del aprendizaje profundo y también deseáis instalar otros frameworks de aprendizaje profundo (la mayoría de ellos solo están disponibles en Linux), podéis consultar:
 * [Tensorflow](https://www.tensorflow.org/install/) - Tensorflow guía de instalación
 * [Pytorch](http://pytorch.org/) - Pytorch comandos para instalar
 
 Discutiremos esto durante el curso.
+
+## Indice del contenido del curso
+Espero que podamos hacer todo este contenido:
+
+### Perspectiva general del DA:
+Conceptos básicos del Data Analysis en Python. Un punto de vista global del entorno... (`Anaconda`, `Spyder` y otros IDEs, `comandos básicos`, ...)
+
+### Extracción de datos:
+Estudiaremos esto probablemente en una fase avanzada del curso, debido a la complejidad de las regexs y del web scrapping... (`BeautifulSoup`, `requests`, ...)
+
+### Análisis explicativo y limpieza de datos:
+Con datos reales previamente recojidos, entender como preparar los datos y como visualizarlos... (`numpy`, `pandas`, `matplotlib`, ...)
+
+### Algoritmos del DA:
+Veremos algunos algoritmos del data analysis, como SVD y algún algoritmo de clustering... (conceptos teóricos, `scikit-learn`, `scipy`, ...)
+
+### Incrementando el rendimiento:
+Cuando trabajamos con muchos datos, o con algoritmos que contienen funciones complejas a nivel de computación, por tanto necesitamos saber como acelerar nuestro código... (`numba`, `mxnet`, ...)
+
+### Deep Learning (aprendizaje profundo):
+Una pequeña visión del mundo de las redes neuronales... (NN (puede que CNN),`mxnet`, ...)
+
 
 ___
 
