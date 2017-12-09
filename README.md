@@ -27,6 +27,12 @@ conda create --name mxnet
 source activate mxnet
 pip install mxnet
 ```
+
+**For linux users (I didn't tested in OSX)**
+```
+sudo apt-get install libatlas-base-dev
+```
+
 **If you are not using Windows or you want GPU support (only CUDA)**
 Go to the following link and choose your OS and your requirements, after that follow the commands (also try to include the conda environments as in the Windows example):
 * [Mx-Net](https://mxnet.incubator.apache.org/install/index.html) - The DL framework installation guide
@@ -104,6 +110,11 @@ conda create --name mxnet
 source activate mxnet
 pip install mxnet
 ```
+**Para los usuarios de linux (no lo he probado con OSX)**
+```
+sudo apt-get install libatlas-base-dev
+```
+
 **Si no vamos a usar Windows o queremos soporte para GPU (solo CUDA)**
 Iremos al siguiente enlace y elegiremos nuestro sistema operativo y sus requisitos, luego seguiremos los comandos (también intentaremos incluir el entorno `conda` como en el ejemplo de Windows):
 * [Mx-Net](https://mxnet.incubator.apache.org/install/index.html) - The DL framework installation guide
